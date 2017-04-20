@@ -12,6 +12,9 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.compiler.source>1.8</project.compiler.source>
+    <project.compiler.target>1.8</project.compiler.target>
+    <project.compiler.test>1.8</project.compiler.test>
   </properties>
 
   <dependencies>
