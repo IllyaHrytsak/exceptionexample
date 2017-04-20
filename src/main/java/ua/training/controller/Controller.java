@@ -19,8 +19,10 @@ public class Controller {
     public void processUser() {
         Scanner scanner = new Scanner(System.in);
 
-        TempNotebook tempNotebook = new TempNotebook(model, view, scanner);
-        tempNotebook.inputData();
+        TempNotebook tempNotebook = new TempNotebook(model, view, new UtilityController(view, scanner));
+
+        tempNotebook.saveDataToModel();
+
 
     }
 }
