@@ -6,10 +6,8 @@ import ua.training.model.Model;
 import ua.training.view.View;
 
 
-/**
- * Hello world!
- *
- */
+
+
 public class Main
 {
     public static void main( String[] args ) {
