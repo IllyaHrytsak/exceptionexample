@@ -59,10 +59,10 @@ public class TempNotebook {
     }
 
     private void saveInputData() {
-//        inputNameSurnameAndPatronymic();
-//        createShortInitials();
-//        inputNicknameAndPhones();
-//        inputEmailAndSkype();
+        inputNameSurnameAndPatronymic();
+        createShortInitials();
+        inputNicknameAndPhones();
+        inputEmailAndSkype();
         inputHomeAddress();
         createHomeAddress();
         saveDateOfCreation();
