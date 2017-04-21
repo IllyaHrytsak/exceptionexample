@@ -20,7 +20,7 @@ public interface StringConstants {
     String INPUT_APARTMENT_NUMBER = "Input your apartment number(e.g. 101): ";
 
     //Wrong input data
-    String WRONG_INPUT_DATA = "Wrong input data";
+    String WRONG_INPUT_DATA = "Wrong input data, try again:";
 
 
 
