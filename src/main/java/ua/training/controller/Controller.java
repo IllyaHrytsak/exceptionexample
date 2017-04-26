@@ -1,6 +1,7 @@
 package ua.training.controller;
 
 
+import ua.training.model.IllegalLoginException;
 import ua.training.model.Model;
 import ua.training.view.View;
 
@@ -23,6 +24,17 @@ public class Controller {
 
         tempNotebook.saveDataToModel();
 
+        boolean sameLogin = true;
+        while(sameLogin) {
+            try {
+                model.setLoginToEnum();
+                sameLogin = false;
+            } catch (IllegalLoginException e) {
+                view.showMessage(e.getMessage());
+                tempNotebook.saveDataToModel();
+            }
+        }
 
+        view.showMessage(model.toString());
     }
 }
