@@ -39,6 +39,7 @@ public class TempNotebook {
 
     public void saveDataToModel() {
         saveInputData();
+        saveNickNameToModel();
         model.setName(name);
         model.setSurname(surname);
         model.setPatronymic(patronymic);
@@ -58,14 +59,23 @@ public class TempNotebook {
         model.setDateOfCreation(dateOfCreation);
     }
 
+    private void saveNickNameToModel() {
+        saveInputNickName();
+        model.setNickName(nickName);
+    }
+
     private void saveInputData() {
         inputNameSurnameAndPatronymic();
-        createShortInitials();
-        inputNicknameAndPhones();
-        inputEmailAndSkype();
-        inputHomeAddress();
-        createHomeAddress();
-        saveDateOfCreation();
+//        createShortInitials();
+//        inputPhones();
+//        inputEmailAndSkype();
+//        inputHomeAddress();
+//        createHomeAddress();
+//        saveDateOfCreation();
+    }
+
+    private void saveInputNickName() {
+        inputNickName();
     }
 
     private void inputNameSurnameAndPatronymic() {
@@ -87,9 +97,13 @@ public class TempNotebook {
         shortInitials = sb.toString();
     }
 
-    private void inputNicknameAndPhones() {
+    private void inputNickName() {
         view.inputNickname();
         nickName = utilityController.inputValueStringWithRegex(RegularExpressions.REG_NICKNAME);
+    }
+
+
+    private void inputPhones() {
         view.inputHomeNumber();
         homeNumber = utilityController.inputValueStringWithRegex(RegularExpressions.REG_HOME_NUMBER);
         view.inputMobileNumber1();
